@@ -3,7 +3,7 @@
     "url": "https://api.mailgun.net/v3/mg.sushmatechworks.info/messages",
     "credentials": {
       "userName": "api",
-      "password": ""
+      "password": "U2FsdGVkX1+wolSEvLVnChOJOJjFOxmpYOOVM9G6X5rpjvC4g2JVrTczILC+4CBPlSDf9URFY0Rv19/1LNTqSg=="
     },
     "sender": "user@mail-sender.com"
   },
