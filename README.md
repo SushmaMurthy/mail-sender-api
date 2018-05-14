@@ -1,7 +1,7 @@
 # mail-sender-api
 
 Mail Sender API is a REST service to send email notifications. 
-Accepts the request with single/multiple recipient(s) and fails over to backup mail provider when default mail provider is unavailable.
+Accepts the request with single/multiple recipient(s) and fails over to backup mail provider (SendGrid) when default mail provider(MailGun) is unavailable.
 
 * **URL**
 /api/sendMail
@@ -91,6 +91,10 @@ To configure Mail Sender API, you will need to modify an existing config file de
 Mail provider credentials and auth details are encrypted using Crypto library for security reasons.
 
 Use /scripts/encrypt.js to encrypt the keys.
+
+## References
+For provider specific details, https://documentation.mailgun.com/en/latest/ &
+https://sendgrid.com/docs<br />
 
 ## Future Enhancements & Notes
 * Add environment specific configuration file support.
