@@ -36,21 +36,18 @@ Single recipient sample: <br />
 <br /><br />NOTE: recipient, cc and bcc have email address format as `[A-Za-z0-9]@[A-Za-z0-9].[A-Za-z0-9]` and multiple email addresses are added as comma seperated values.
 
 * **Success Response**
-<br />
 `{
     "code": 200,
     "message": "Email sent successfully! <acknowldegment from mail provider>"
 }`
 
 * **Validation Error Response**
-<br />
 `{
     "code": 400,
     "message": "Invalid or missing parameters: <data params>"
 }`
 
 * **Error Response**
-<br />
 `{
     "code": 500,
     "message": "Internal error occurred, Sorry for the inconvenience! <acknowldegment from mail provider>"
