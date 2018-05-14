@@ -78,7 +78,7 @@ npm run test
 Precommit Hook: git precommit hook is added to the repo using husky node library. This script ensures that Lint and Unit tests are run before each commit.
 ```bash
 npm run precommit
-# view code coverage report at /coverage/lcov-report/index.html
+# view code coverage report at coverage.zip/coverage/lcov-report/index.html
 ```
 
 This repository is also linked to Sonarqube for continuous code quality analysis. Report captures code smells, bugs and vulnerabilities.
@@ -91,6 +91,25 @@ To configure Mail Sender API, you will need to modify an existing config file de
 Mail provider credentials and auth details are encrypted using Crypto library for security reasons.
 
 Use /scripts/encrypt.js to encrypt the keys.
+
+## Build and deployment
+This API can be built as a docker image and run as docker container in local.
+
+* Prerequisites: Linux machine with Docker toolbox<br />
+* Build: Run the below command in the root folder of repository<br />
+    ```bash
+    docker build -t mail-sender . --no-cache
+  # The above command needs internet connection, make sure proxy is not enabled. If enabled pass arguments --build-arg HTTP_PROXY=<YourProxy> and --build-arg HTTPS_PROXY=<YourProxy> in the command.
+    ```
+* Run: To bring up the service execute the below command<br />
+    ```bash
+    docker run -d -p 3000:3000 mail-sender
+  # Runs the container and exposes port 3000. To validate service run curl on health end point
+    curl http://localhost:3000/api/_health
+  # `Mail service is healthy!`
+    ```
+
+Further, To deploy this service to a server, Push the mail-sender docker image to docker registry and run as a container on any cloud platform.
 
 ## References
 For provider specific details, https://documentation.mailgun.com/en/latest/ &
