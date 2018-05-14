@@ -51,11 +51,11 @@ const processRequest = (req, res) => {
   });
   const validationResults = inputValidator.validate(params);
   if (validationResults) {
-    console.log(`Validation error on params: ${validationResults}`);
+    console.log(`Validation error on params ${validationResults}`);
 
     return res.status(400).send({
       code: 400,
-      message: `Aw, Snap! Invalid or missing parameters: ${validationResults}`
+      message: `Aw, Snap! Invalid or missing parameters ${validationResults}`
     });
   }
   sendMail(params)
