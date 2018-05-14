@@ -1,0 +1,21 @@
+{
+  "mailgun": {
+    "url": "https://api.mailgun.net",
+    "credentials": {
+      "userName": "api",
+      "password": "U2FsdGVkX1+TI7SILG6Ve2GnqHN1f53rqJQ9jorWwq4="
+    },
+    "sender": "user@samples.mailgun.org"
+  },
+  "sendgrid": {
+    "url": "https://api.sendgrid.net",
+    "auth": {
+      "apiKey": "U2FsdGVkX1+4fPuFZ1oiq94uUwq7FvyB6q+KHcA2bbE="
+    },
+    "sender": "user@samples.sendgrid.org"
+  },
+  "providers": {
+    "default": "mailgun",
+    "failover": "sendgrid"
+  }
+}

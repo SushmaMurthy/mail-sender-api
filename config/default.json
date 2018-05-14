@@ -1,0 +1,21 @@
+{
+  "mailgun": {
+    "url": "https://api.mailgun.net/v3/mg.sushmatechworks.info/messages",
+    "credentials": {
+      "userName": "api",
+      "password": ""
+    },
+    "sender": "user@mail-sender.com"
+  },
+  "sendgrid": {
+    "url": "https://api.sendgrid.com/v3/mail/send",
+    "auth": {
+      "apiKey": "U2FsdGVkX1/BqnQMpLBDLP+TYtYgzO95yeZ+Ff1oBISlml19DX42qrvFFGPzDKTmIqQ98UqRZmhIZ1admVtGiTFFaAOLZQuPXasCgW5LcVhyMIm4lDeOKrJlrWN/q2vO"
+    },
+    "sender": "user@mail-sender.com"
+  },
+  "providers": {
+    "default": "mailgun",
+    "failover": "sendgrid"
+  }
+}

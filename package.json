@@ -1,0 +1,48 @@
+{
+  "name": "mail-sender-api",
+  "version": "1.0.0",
+  "description": "RESTful service to send emails",
+  "main": "src/service.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node src/service",
+    "lint": "./node_modules/.bin/eslint src/*",
+    "test": "./node_modules/.bin/istanbul cover -x src/service -x scripts/encrypt node_modules/mocha/bin/_mocha test/**/*.unit.test.js check-coverage",
+    "precommit": "bash ./scripts/precommit.sh"
+  },
+  "keywords": [
+    "RESTful",
+    "MailService"
+  ],
+  "author": "Sushma Murthy",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^1.26.2",
+    "crypto-js": "^3.1.9-1",
+    "express": "latest",
+    "lodash": "^4.17.10",
+    "node-validator": "^0.1.21",
+    "request": "^2.85.0",
+    "request-promise": "^4.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "chai-http": "^4.0.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-config-prettier": "^2.3.0",
+    "husky": "latest",
+    "istanbul": "^0.4.2",
+    "mocha": "^3.0.2",
+    "mockery": "^2.0.0",
+    "prettier": "^1.5.3",
+    "sinon": "^2.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm precommit"
+    }
+  }
+}

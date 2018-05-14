@@ -1,0 +1,13 @@
+reporting:
+  watermarks:
+        statements: [98, 100]
+        lines: [98, 100]
+        functions: [98, 100]
+        branches: [98, 100]
+check:
+    global:
+        statements: 100
+        lines: 100
+        branches: 100
+        functions: 100
+        excludes: []
