@@ -38,19 +38,19 @@ Single recipient sample: <br />
 * **Success Response**
 `{
     "code": 200,
-    "message": "Email sent successfully! <acknowldegment from mail provider>"
+    "message": "Yay! Email sent successfully!"
 }`
 
 * **Validation Error Response**
 `{
     "code": 400,
-    "message": "Invalid or missing parameters: <data params>"
+    "message": "Aw, Snap! Invalid or missing parameters: <data params>"
 }`
 
 * **Error Response**
 `{
     "code": 500,
-    "message": "Internal error occurred, Sorry for the inconvenience! <acknowldegment from mail provider>"
+    "message": "Aw, Snap! Internal error occurred, Please try again after sometime"
 }`
 
 ## Installation
