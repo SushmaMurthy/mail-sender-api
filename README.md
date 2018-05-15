@@ -122,4 +122,5 @@ https://sendgrid.com/docs<br />
 * Tighten the input validations, especially Email address format.
 * Fetch the encryption key from datastore before decrypting provider credentials/auth.
 * Create Swagger specs or API docs for mail sender API
+* Add security configuration to restrict access
 * Address TODOs in src files
